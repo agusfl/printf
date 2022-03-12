@@ -22,9 +22,9 @@ int _printf(const char *format, ...)
 	cont2 = 0;
 	while (format != NULL && format[cont2] != '\0')
 	{
-		cont1 = 0;
 		if (format[cont2] == '%')
 		{
+			cont1 = 0;
 			while (identifier[cont1].symb != '\0')
 				{	
 					if (format[cont2 + 1] == identifier[cont1].symb)
@@ -35,6 +35,11 @@ int _printf(const char *format, ...)
 				}
 			cont2++;
 			break;
+		}
+		else
+		{
+			_putchar(format[cont2]);
+			cont2++;
 		}
 	}
 	_putchar('\n');
