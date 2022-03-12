@@ -15,7 +15,7 @@ int print_string(va_list s)
 
 	if (str == NULL)
 	{
-		str = "(nil)";
+		return (0);
 	}
 	for (i = 0; str[i] != '\0'; i++)
 	{
