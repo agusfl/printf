@@ -6,9 +6,11 @@
  * Return: void
  */
 
-int print_number(va_list n)
+int print_number(va_list num)
 {
 	unsigned int dec, count, i;
+	int n, len;
+	n = va_arg(num, int);
 
 	if (n < 0)
 	{
@@ -26,5 +28,8 @@ int print_number(va_list n)
 		count *= 10;
 	}
 	for (; count >= 1; count /= 10)
-		_putchar(((i / count) % 10) + '0');
+	{
+		len += _putchar(((i / count) % 10) + '0');
+	}
+	return (len);
 }
