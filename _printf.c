@@ -27,15 +27,15 @@ int _printf(const char *format, ...)
 		{
 			cont1 = 0;
 			while (identifier[cont1].symb != '\0')
-				{	
-					if (format[cont2 + 1] == identifier[cont1].symb)
-					{
-					identifier[cont1].fun(list);
-					cont2++;
-					break;
-					}
-					cont1++;
+			{
+				if (format[cont2 + 1] == identifier[cont1].symb)
+				{
+				identifier[cont1].fun(list);
+				cont2++;
+				break;
 				}
+				cont1++;
+			}
 			cont2++;
 		}
 		else
