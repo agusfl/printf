@@ -1,27 +1,22 @@
-#ifndef VARIADIC_FUNCTIONS_H
-#define VARIADIC_FUNCTIONS_H
+#ifndef MAIN_H
+#define MAIN_H
 #include <stdarg.h>
 #include <stdio.h>
 #include <stdlib.h>
-/**
- * struct print - print
- * @t: type
- * @f: function
- */
-typedef struct print
-{
-	char *t;
-	void (*f)(va_list);
-} print_t;
 
-int sum_them_all(const unsigned int n, ...);
+/**
+ * struct data_format - struct
+ * @symb: format to print
+ * @fun: function pointer
+ */
+
+typedef struct data_format
+{
+	char symb;
+	void (*fun)(va_list);
+} data_struct;
 
 int _putchar(char c);
-
-void print_numbers(const char *separator, const unsigned int n, ...);
-
-void print_strings(const char *separator, const unsigned int n, ...);
-
-void print_all(const char * const format, ...);
+int print_char(va_list c);
 
 #endif
