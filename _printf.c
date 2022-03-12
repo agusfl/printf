@@ -13,6 +13,7 @@ int _printf(const char *format, ...)
 
 	data_struct identifier[] = {
 		{'c', print_char},
+		{'s', print_string},
 		{'\0', NULL}
 		};
 

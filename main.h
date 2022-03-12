@@ -13,11 +13,12 @@
 typedef struct data_format
 {
 	char symb;
-	void (*fun)(va_list);
+	int (*fun)(va_list);
 } data_struct;
 
 int _putchar(char c);
 int print_char(va_list c);
+int print_string(va_list s);
 int _printf(const char *format, ...);
 
 #endif
