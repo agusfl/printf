@@ -2,14 +2,15 @@
 
 /**
  * print_number - print a integer
- * @n: number to print
- * Return: void
+ * @num: number to print
+ * Return: length
  */
 
 int print_number(va_list num)
 {
 	unsigned int dec, count, i;
 	int n, len;
+
 	n = va_arg(num, int);
 
 	if (n < 0)
@@ -19,7 +20,7 @@ int print_number(va_list num)
 	}
 	else
 		i = n;
-	
+
 	dec = i;
 	count = 1;
 	while (dec > 9)
