@@ -18,5 +18,6 @@ typedef struct data_format
 
 int _putchar(char c);
 int print_char(va_list c);
+int _printf(const char *format, ...);
 
 #endif
