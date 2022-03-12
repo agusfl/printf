@@ -46,7 +46,6 @@ int _printf(const char *format, ...)
 			cont2++;
 		}
 	}
-	_putchar('\n');
 	va_end(list);
-	return (cont2);
+	return (cont2 - 1);
 }
