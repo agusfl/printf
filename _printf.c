@@ -14,6 +14,7 @@ int _printf(const char *format, ...)
 	data_struct identifier[] = {
 		{'c', print_char},
 		{'s', print_string},
+		{'%', print_percentage},
 		{'\0', NULL}
 		};
 
@@ -30,11 +31,12 @@ int _printf(const char *format, ...)
 					if (format[cont2 + 1] == identifier[cont1].symb)
 					{
 					identifier[cont1].fun(list);
+					cont2++;
+					break;
 					}
 					cont1++;
 				}
 			cont2++;
-			break;
 		}
 		else
 		{
