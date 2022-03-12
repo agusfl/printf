@@ -6,7 +6,7 @@
  * Return: 1
  */
 
-int print_percentage (va_list list)
+int print_percentage(va_list list)
 {
 	_putchar('%');
 	return (1);
