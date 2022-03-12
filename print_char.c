@@ -8,6 +8,6 @@
 
 int print_char(va_list c)
 {
-	printf("%c", va_arg(c, int));
+	_putchar(va_arg(c, int));
 	return (1);
 }
