@@ -8,7 +8,7 @@
 
 int print_binary(va_list num)
 {
-	unsigned int i, aux, r;
+	unsigned int i, aux;
 	char *str;
 	int n = 0;
 	int m;
