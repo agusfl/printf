@@ -26,6 +26,7 @@ int print_number(va_list num);
 int print_binary(va_list num);
 int print_rev(va_list rev);
 int print_rot13(va_list rot13);
+int print_unsigned(va_list num);
 
 /* auxiliar functions */
 int _putchar(char c);

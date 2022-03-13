@@ -8,12 +8,12 @@
 
 int print_unsigned(va_list num)
 {
-	unsigned int dec, count, n, i = 0;
+	unsigned int dec, count, n, i;
 	int len;
 
 	n = va_arg(num, int);
 
-	n = i;
+	i = n;
 	dec = n;
 	count = 1;
 	while (dec > 9)
