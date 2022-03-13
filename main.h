@@ -16,6 +16,7 @@ typedef struct data_format
 	int (*fun)(va_list);
 } data_struct;
 
+/* prototypes for _printf functions */
 int _putchar(char c);
 int print_char(va_list c);
 int print_string(va_list s);
@@ -23,5 +24,10 @@ int _printf(const char *format, ...);
 int print_percentage(va_list list);
 int print_number(va_list num);
 int print_binary(va_list num);
+int print_rev(va_list rev);
+int print_rot13(va_list rot13);
+
+/* auxiliar functions */
+int _putchar(char c);
 
 #endif

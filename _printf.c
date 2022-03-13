@@ -18,10 +18,15 @@ int _printf(const char *format, ...)
 		{'i', print_number},
 		{'d', print_number},
 		{'b', print_binary},
+		{'r', print_rev},
+		{'R', print_rot13},
 		{'\0', NULL}
 		};
 
 	va_start(list, format);
+
+	if (format == NULL)/* validate */
+		return (-1);
 
 	cont2 = 0;
 	while (format != NULL && format[cont2] != '\0')
