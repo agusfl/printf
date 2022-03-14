@@ -1,8 +1,8 @@
 # Project printf Holberton adding new things
 
 ## Markdown try
-Prueba
+_Prueba
 ##seonde try
-Prueba 1
+_Prueba 1
 ##third try
-Prueba 2
+_Prueba 2
