@@ -1,15 +1,14 @@
 #include "main.h"
 
 /**
- * _printf - print output according to a format
- * @format: format of printing
- * Return: number of characters printed(exluding null byte)
+ * get_fun - return function
+ * @format: format
+ * Return: function pointer
  */
 
-int _printf(const char *format, ...)
+int (*get_fun(char format))(va_list)
 {
-	int cont1, cont2;
-	va_list list;
+	int cont1 = 0;
 
 	data_struct identifier[] = {
 		{'c', print_char},
@@ -23,11 +22,32 @@ int _printf(const char *format, ...)
 		{'\0', NULL}
 		};
 
-	va_start(list, format);
+	while (identifier[cont1].symb != '\0')
+	{
+		if (format == identifier[cont1].symb)
+		{
+			return (identifier[cont1].fun);
+		}
+		cont1++;
+	}
+	return (NULL);
+}
 
+/**
+ * _printf - print output according to a format
+ * @format: format of printing
+ * Return: number of characters printed(exluding null byte)
+ */
+
+int _printf(const char *format, ...)
+{
+	int cont2, contador = 0;
+	va_list list;
+	int (*fun)(va_list);
+
+	va_start(list, format);
 	if (format == NULL)/* validate */
 		return (-1);
-
 	cont2 = 0;
 	while (format != NULL && format[cont2] != '\0')
 	{
@@ -37,37 +57,27 @@ int _printf(const char *format, ...)
 			{
 				break;
 			}
-			cont1 = 0;
-			while (identifier[cont1].symb != '\0')
-			{
 				if (format[cont2 + 1] == '%')
 				{
-					_putchar(format[cont2 + 1]);
-					cont2++;
-					break;
+					_putchar(format[cont2 + 1]), cont2++, contador++;
 				}
-
-				else if (format[cont2 + 1] == identifier[cont1].symb)
+				else
 				{
-				identifier[cont1].fun(list);
-				cont2++;
-				break;
-				}
-				if (cont1 == 7)
-				{
-					_putchar(format[cont2]);
-					break;
-				}
-				cont1++;
-			}
-			cont2++;
+					fun = (*get_fun(format[cont2 + 1]));
+					if (fun != NULL)
+						contador += fun(list), cont2++;
+					else
+					{
+						_putchar(format[cont2]), contador++;
+						break;
+					}
+				} cont2++;
 		}
 		else
 		{
-			_putchar(format[cont2]);
-			cont2++;
+			_putchar(format[cont2]), cont2++, contador++;
 		}
 	}
 	va_end(list);
-	return (cont2);
+	return (contador);
 }

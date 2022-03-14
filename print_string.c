@@ -8,14 +8,19 @@
 
 int print_string(va_list s)
 {
-	int i;
+	int i, j;
 	char *str;
+	char *str2 = "(null)";
 
 	str = va_arg(s, char *);
 
 	if (str == NULL)
 	{
-		return (0);
+		for (j = 0; str2[j] != '\0'; j++)
+		{
+			_putchar(str2[j]);
+		}
+		return (6);
 	}
 	for (i = 0; str[i] != '\0'; i++)
 	{
