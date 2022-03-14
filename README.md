@@ -7,3 +7,16 @@ This is a simple implementation of our mini version of the **printf** function t
 This repository holds all the necessary code for our custom `_printf` function. With our version of printf you can: print any character, string, integer, or decimal number, reverse your strings, transform any number to binary and octal bases, and encrypt your string with rot13 encryption.
 Our version currently handles the following conversion specifiers: `c`, `s`, `i`, `d`, `b` and does not yet support field width, precision, flag characters, or length modifiers. 
 We add the following specifiers that are not supported by the original printf function: `r` reverse conversion and the `R` rot13 conversion.
+
+# Description of each file:
+
+| Files               |Desription                                               |
+|----------------|-------------------------------|-----------------------------|
+|main.h|Hold prototypes of functions, libraries headers and struct used.                   
+|_putchar.c |Use of write function
+|_printf.c |Print output according to a format                       
+|print_char.c  |Prints a char
+|print_string.c |Prints a string
+|print_number.c |Prints an integer and decimal number
+|print_rev.c | Prints a string in reverse
+|print_rot13.c | Prints a string with rot13 encryption
