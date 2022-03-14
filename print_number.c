@@ -9,13 +9,14 @@
 int print_number(va_list num)
 {
 	unsigned int dec, count, i;
-	int n, len;
+	int n, len = 0;
 
 	n = va_arg(num, int);
 
 	if (n < 0)
 	{
 		_putchar('-');
+		len++;
 		i = n * -1;
 	}
 	else
