@@ -57,21 +57,20 @@ int _printf(const char *format, ...)
 			{
 				return (-1);
 			}
-				if (format[cont2 + 1] == '%')
+			else if (format[cont2 + 1] == '%')
+			{
+				_putchar(format[cont2 + 1]), cont2++, contador++;
+			}
+			else
+			{
+				fun = (*get_fun(format[cont2 + 1]));
+				if (fun != NULL)
 				{
-					_putchar(format[cont2 + 1]), cont2++, contador++;
+					contador += fun(list), cont2++;
 				}
 				else
-				{
-					fun = (*get_fun(format[cont2 + 1]));
-					if (fun != NULL)
-						contador += fun(list), cont2++;
-					else
-					{
-						_putchar(format[cont2]), contador++;
-						break;
-					}
-				} cont2++;
+					_putchar(format[cont2]), contador++;
+			} cont2++;
 		}
 		else
 			_putchar(format[cont2]), cont2++, contador++;
