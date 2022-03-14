@@ -14,7 +14,6 @@ int _printf(const char *format, ...)
 	data_struct identifier[] = {
 		{'c', print_char},
 		{'s', print_string},
-		{'%', print_percentage},
 		{'i', print_number},
 		{'d', print_number},
 		{'b', print_binary},
@@ -34,14 +33,30 @@ int _printf(const char *format, ...)
 	{
 		if (format[cont2] == '%')
 		{
+			if (format[cont2 + 1] == '\0')
+			{
+				break;
+			}
 			cont1 = 0;
 			while (identifier[cont1].symb != '\0')
 			{
-				if (format[cont2 + 1] == identifier[cont1].symb)
+				if (format[cont2 + 1] == '%')
+				{
+					_putchar(format[cont2 + 1]);
+					cont2++;
+					break;
+				}
+
+				else if (format[cont2 + 1] == identifier[cont1].symb)
 				{
 				identifier[cont1].fun(list);
 				cont2++;
 				break;
+				}
+				if (cont1 == 7)
+				{
+					_putchar(format[cont2]);
+					break;
 				}
 				cont1++;
 			}
@@ -54,5 +69,5 @@ int _printf(const char *format, ...)
 		}
 	}
 	va_end(list);
-	return (cont2 - 1);
+	return (cont2);
 }
