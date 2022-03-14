@@ -55,7 +55,7 @@ int _printf(const char *format, ...)
 		{
 			if (format[cont2 + 1] == '\0')
 			{
-				break;
+				return (-1);
 			}
 				if (format[cont2 + 1] == '%')
 				{
@@ -74,9 +74,7 @@ int _printf(const char *format, ...)
 				} cont2++;
 		}
 		else
-		{
 			_putchar(format[cont2]), cont2++, contador++;
-		}
 	}
 	va_end(list);
 	return (contador);
