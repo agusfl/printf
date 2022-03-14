@@ -16,7 +16,7 @@ int print_binary(va_list num)
 	i = va_arg(num, int);
 	m = i;
 
-	if (i == '0')
+	if (i == 0)
 	{
 		_putchar('0');
 		return (0);
