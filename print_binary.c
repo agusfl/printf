@@ -28,6 +28,11 @@ int print_binary(va_list num)
 
 	str = malloc(aux * sizeof(int) + 1);
 
+	if (str == NULL)
+	{
+		return (-1);
+	}
+
 	while (m > 0)
 	{
 		str[n] = (m % 2) + '0';
