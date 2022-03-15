@@ -15,7 +15,7 @@ We add the following specifiers that are not supported by the original printf fu
 * Compiler: gcc 
  > **Note:** The code will be compiled using the options: -Wall -Werror -Wextra -pedantic -std=gnu89
 
-# Description of each file:
+## Description of each file:
 
 | Files          |Desription
 |:----------------|:-------------------------------:|
@@ -28,7 +28,11 @@ We add the following specifiers that are not supported by the original printf fu
 |print_rev.c | Prints a string in reverse
 |print_rot13.c | Prints a string with rot13 encryption
 
+## Flowchart
+
+<img src = "https://files.slack.com/files-pri/T01BXJ5C1PT-F0378LQAD7W/untitled_diagram.drawio.png">
+
 ## Authors
 
-* Agustin Flom
-* Mauricio Percovich
+* [Agustin Flom](https://github.com/agusfl)
+* [Mauricio Percovich](https://github.com/MauriPercovich)
