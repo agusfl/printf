@@ -22,8 +22,8 @@ int print_binary(va_list num)
 
 	while (i > 0)
 	{
-		aux++;
 		i /= 2;
+		aux++;
 	}
 
 	str = malloc(aux * sizeof(int) + 1);
@@ -36,13 +36,13 @@ int print_binary(va_list num)
 	while (m > 0)
 	{
 		str[n] = (m % 2) + '0';
-		n++;
 		m /= 2;
+		n++;
 	}
 	while (n != 0)
 	{
-		_putchar(str[n]);
 		n--;
+		_putchar(str[n]);
 	}
 	free(str);
 return (aux);
