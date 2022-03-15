@@ -30,7 +30,7 @@ We add the following specifiers that are not supported by the original printf fu
 
 ## Flowchart
 
-https://github.com/agusfl/printf/blob/master/untitled_diagram.drawio.png 
+<img src ="https://user-images.githubusercontent.com/64185026/158457454-974577bb-df00-405d-ad34-bc2331b35881.png">
 
 ## Authors
 
