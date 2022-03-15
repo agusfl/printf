@@ -11,7 +11,7 @@ We add the following specifiers that are not supported by the original printf fu
 # Description of each file:
 
 | Files          |Desription
-|----------------|-------------------------------|-----------------------------|
+|:----------------|:-------------------------------:|
 |main.h|Hold prototypes of functions, libraries headers and struct used.                   
 |_putchar.c |Use of write function
 |_printf.c |Print output according to a format                       
