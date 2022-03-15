@@ -8,10 +8,8 @@
 
 int print_binary(va_list num)
 {
-	unsigned int i, aux;
+	unsigned int i, aux, m, n = 0;
 	char *str;
-	int n = 0;
-	int m;
 
 	i = va_arg(num, int);
 	m = i;
@@ -36,7 +34,7 @@ int print_binary(va_list num)
 		n++;
 		m /= 2;
 	}
-	while (n >= 0)
+	while (n != 0)
 	{
 		_putchar(str[n]);
 		n--;
