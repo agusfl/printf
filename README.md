@@ -28,7 +28,7 @@ We add the following specifiers that are not supported by the original printf fu
 |print_rev.c | Prints a string in reverse
 |print_rot13.c | Prints a string with rot13 encryption
 
-Authors
+## Authors
 
 * Agustin Flom
 * Mauricio Percovich
