@@ -1,0 +1,76 @@
+NAME
+	_printf
+
+SYNOPSIS
+	
+	#include "main.h"
+
+	int _printf(char *format, ...)
+
+DESCRIPTION
+
+	The function _printf() is a variadic function that produces output according
+	to a specific format described below. 
+	This function writes the output to standard output.
+	Depending on the chosen specifier varies the conversion of the agruments.
+	The format string controls the output given, it specifies how subsequent
+	arguments are converted for stdout.
+
+Format of the format string
+
+	This format string is a character string that is composed of zero or various 
+	directives, these are: normal characters excluding "%" which are copied exact 
+	the same to the output; and the conversion specifications result adding zero
+	or more arguments. 
+	Each conversion specification is added using the character % and ends with a 
+	conversion specifier.
+
+Conversion specifiers
+	
+	Is a character followed after the % character that specifies the type of 
+	conversion to be applied. The conversion specifiers to our _printf version are:
+
+	c       The char argument is expected to be the character to be printed.
+
+	s       The const char * argument is expected to be a pointer to
+                an array.  Characters from the array are written up to 
+		(but not including) a terminating null byte ('\0').
+
+	d, i	The int argument is converted to signed decimal notation.
+
+	o, u, x , X
+		The unsigned int argument is converted to unsigned octal
+                (o), unsigned decimal (u), or unsigned hexadecimal (x and
+                X) notation.  The letters abcdef are used for x
+                conversions; the letters ABCDEF are used for X
+                conversions.
+
+	b       The int is expected to be an int. Prints the number in binary.
+
+
+	r	The char * is expected to be a pointer to a string. The characters
+		from the array are printed in reverse excluding the null byte ('\0').
+
+	R (ROT-13)
+		The char * is expected to be a pointer to a string. Characters are
+		printed using ROT 13 encryption (rot abecedary 13 places to the right).
+
+
+	b	The int is expected to be an integer. Prints the number in binary.
+
+RETURN VALUE
+
+	On success returns the number of characters printed, excluding the null byte
+	('\0') used to print strings.
+
+Syntax example:
+
+        _printf("Hello I am %d. years old", age); ---> Hello I am <age content> years old.
+
+        The arguments must correspond with the conversion specifier order. The arguments
+        are used int the order given, in this case the argument given is an int because we	
+	are using the decimal specifier (%d).
+
+Authors:
+
+	Agustin Flom and Mauricio Percovich
