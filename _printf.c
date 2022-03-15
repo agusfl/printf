@@ -18,8 +18,6 @@ int (*get_fun(char format))(va_list)
 		{'b', print_binary},
 		{'u', print_unsigned},
 		{'o', print_octa},
-		{'x', print_hexa},
-		{'X', print_HEXA},
 		{'r', print_rev},
 		{'R', print_rot13},
 		{'\0', NULL}
