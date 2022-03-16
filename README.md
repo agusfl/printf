@@ -34,7 +34,7 @@ We add the following specifiers that are not supported by the original printf fu
 
 ## Flowchart
 
-<img src ="https://user-images.githubusercontent.com/64185026/158457454-974577bb-df00-405d-ad34-bc2331b35881.png">
+<img src ="https://user-images.githubusercontent.com/64185026/158588761-c4d89506-1e20-4151-b0b2-604518585e9f.png">
 
 ## Authors
 
