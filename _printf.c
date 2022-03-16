@@ -19,6 +19,7 @@ int (*get_fun(char format))(va_list)
 		{'u', print_unsigned},
 		{'o', print_octal},
 		{'x', print_hexa_low},
+		{'X', print_hexa_UPPERCASE},
 		{'r', print_rev},
 		{'R', print_rot13},
 		{'\0', NULL}
